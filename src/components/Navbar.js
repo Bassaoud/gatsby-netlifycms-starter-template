@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import GitHubButton from 'react-github-btn'
+import React from "react";
+import { Link } from "gatsby";
+import GitHubButton from "react-github-btn";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
   toggleHamburger = () => {
@@ -22,14 +22,14 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -41,16 +41,19 @@ const Navbar = class extends React.Component {
         <div className="container flex-around">
           <div className="navbar-brand logo">
             <Link to="/" className="navbar-item" title="Logo">
-              <h1>Brand | Logo</h1>
+              <h1>Reformuslim</h1>
             </Link>
-              <GitHubButton href="https://github.com/simarmannsingh">Follow</GitHubButton>
+            <GitHubButton href="https://github.com/simarmannsingh">
+              Follow
+            </GitHubButton>
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
               onKeyDown={() => this.toggleHamburger()}
-              role="button" tabIndex="0"
+              role="button"
+              tabIndex="0"
             >
               <span />
               <span />
@@ -61,25 +64,25 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">            
-            <Link className="navbar-item" to="/blog">
+            <div className="navbar-start has-text-centered">
+              <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
               <Link className="navbar-item" to="/about">
                 About
-              </Link>              
+              </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
               <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link>
-            </div>           
+            </div>
           </div>
         </div>
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;
