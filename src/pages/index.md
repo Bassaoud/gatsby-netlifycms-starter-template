@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: Alex Murphy
+title: Devenir un meilleur musulman
 image: /img/home-jumbotron.jpg
-heading: Alex Murphy
-subheading: Developer with a flair for design
+heading: Reformuslim
+subheading: Nulle divinité digne d'être adoré en dehors d'Allah
 ---
